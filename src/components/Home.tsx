@@ -11,6 +11,7 @@ export  function Navbar() {
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
+      <div className=""></div>
     </nav>
   )
 }
