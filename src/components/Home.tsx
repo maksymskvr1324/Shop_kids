@@ -1,12 +1,16 @@
 import React from 'react'
 
-export default function Home() {
+export  function Navbar() {
   return (
-    <>
-        <div>
-            Home     
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab hic, deleniti dolorem sapiente odit sunt explicabo perspiciatis, in suscipit rem aperiam! Ut suscipit tenetur fugiat! Incidunt distinctio accusantium consequatur fugiat?</p>
-    </>
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">Kids SHop</div>
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   )
 }
