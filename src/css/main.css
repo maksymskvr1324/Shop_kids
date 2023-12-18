@@ -39,4 +39,33 @@ body{
     border-bottom: 2px solid #fff;
     text-align: none;
   }
-  
+
+footer.footer{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.logo-footer{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.footer-content{
+  display: flex;
+  width: 100%;
+}
+
+.footer-content div{
+  margin: 0 auto;
+}
+
+.footer-content div ul li{
+  list-style: none;
+}
+
+.footer-content div ul li a{
+  color: black;
+  text-decoration: none;
+}

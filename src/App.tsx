@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar} from './components/Home';
+import {Footer} from './components/footer';
 
 
 
@@ -8,8 +9,8 @@ import {Navbar} from './components/Home';
 function App() {
   return (
     <div>
-      
       <Navbar />
+      <Footer/>
     </div>
   );
 }
