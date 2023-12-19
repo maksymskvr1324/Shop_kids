@@ -2,22 +2,28 @@
 
 body{
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #3f3f3f;
     padding: 15px 0;
+    border-bottom: 1px solid rgb(208, 208, 208);
+    z-index: 1;
+    box-shadow: 0px 2px 6px rgb(206, 206, 206);
   }
   
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: 80px;
   }
   
   .nav-links {
@@ -26,19 +32,45 @@ body{
   }
   
   .nav-links li {
-    margin-right: 20px;
+    margin-right: 80px;
   }
   
   .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color:  #2e2e2e;
+  }
+
+  .nav-links  .active{
+    border-bottom: #8e8e8e solid 1px;
+  }
+  .nav-links  .active:hover{
+    color: #3f3f3f;
+    transition: 0.3s;
+    border-bottom: #373737 solid 2px;
   }
   
   .nav-links a:hover {
-    border-bottom: 2px solid #fff;
-    text-align: none;
+    color: #3f3f3f;
+    transition: 0.3s;
+    border-bottom: #8e8e8e solid 2px;
+    text-shadow: 1px 0px 1px rgb(0, 0, 0);
   }
+
+
+
+
+  .cart{
+    
+    max-width: 240px;
+  }
+  
+  .cart .image{
+    width: 100%;
+    background-color: aqua;
+  }
+
+
+
 
 footer.footer{
   margin-top: 10px;
@@ -70,12 +102,3 @@ footer.footer{
   text-decoration: none;
 }
 
-.cart{
-  /* background-color: aqua; */
-  max-width: 240px;
-}
-
-.cart .image{
-  width: 100%;
-  background-color: aqua;
-}

@@ -10,8 +10,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Footer/>
-      <ShortCart/>
+      {/* <Footer/> */}
+      {/* <ShortCart/> */}
     </div>
   );
 }
