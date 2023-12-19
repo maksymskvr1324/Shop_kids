@@ -10,6 +10,10 @@ export  function Navbar() {
           <li><a href="/shop">Shop</a></li>
           <li><a href="/about">About us</a></li>
           <li><a href="/contact">Contact</a></li>
+          <div className='navbar-icon'>
+            <span className="material-symbols-outlined">shopping_cart</span>
+            <span className="material-symbols-outlined">account_circle</span>
+          </div>
         </ul>
       </div>
       <div className=""></div>
