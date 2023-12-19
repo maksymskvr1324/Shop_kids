@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar} from './components/Home';
+import {Navbar, ShortCart} from './components/Home';
 import {Footer} from './components/footer';
 
 
@@ -11,6 +11,7 @@ function App() {
     <div>
       <Navbar />
       <Footer/>
+      <ShortCart/>
     </div>
   );
 }
