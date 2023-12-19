@@ -14,3 +14,20 @@ export  function Navbar() {
     </nav>
   )
 }
+
+export function ShortCart(){
+  return(
+    <div className="cart">
+      <div className="image">
+        <img src="" alt="image-cart" className="img" />
+      </div>
+      <div className="description-cart">
+        <div className="name-cart">name</div>
+        <div className="price-cart">price</div>
+      </div>
+      <div className="button-cart">
+        <div className="btn">Add to cart</div>
+      </div>
+    </div>
+  )
+}

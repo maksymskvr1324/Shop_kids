@@ -69,3 +69,13 @@ footer.footer{
   color: black;
   text-decoration: none;
 }
+
+.cart{
+  /* background-color: aqua; */
+  max-width: 240px;
+}
+
+.cart .image{
+  width: 100%;
+  background-color: aqua;
+}
