@@ -4,10 +4,11 @@ export  function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="logo">Kids SHop</div>
+        <div className="logo">Kids Shop</div>
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a className='active' href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/about">About us</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
