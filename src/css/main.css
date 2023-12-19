@@ -4,35 +4,36 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+.container{
+  max-width: 1200px; 
+  margin: 0 auto;   
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar {
     background-color: #ffffff;
     color: #3f3f3f;
-    padding: 15px 0;
     border-bottom: 1px solid rgb(208, 208, 208);
     z-index: 1;
     box-shadow: 0px 2px 6px rgb(206, 206, 206);
   }
   
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-  
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 80px;
   }
   
   .nav-links {
     list-style: none;
     display: flex;
+    margin: 0;
   }
   
   .nav-links li {
-    margin-right: 80px;
+    margin: 0px 20px auto;
   }
   
   .nav-links a {
@@ -67,13 +68,10 @@ body{
 
  .navbar-icon{
   display: flex;
-  margin-right: 30px;
   cursor: pointer;
   
 }
-.navbar-icon span{
-  margin-right: 20px;
-}
+
 
 
 

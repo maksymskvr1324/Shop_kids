@@ -16,7 +16,6 @@ export  function Navbar() {
           </div>
         </ul>
       </div>
-      <div className=""></div>
     </nav>
   )
 }
