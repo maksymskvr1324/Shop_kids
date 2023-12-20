@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-  max-width: 1200px; 
+  max-width: 90%; 
   margin: 0 auto;   
   padding: 10px;
   display: flex;
@@ -99,14 +99,87 @@ body{
 
 /* Footer */
 
-
-footer{
-  background-color: #2e2e2e;
+footer {
+  background-color: #333;
   color: #fff;
-  margin: 0 auto;
   bottom: 0;
   position: fixed;
   width: 100%;
+}
+
+.footer-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-info-block {
   display: flex;
-  justify-content: center; 
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pages,
+.contact,
+.more-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.pages h3,
+.contact h3,
+.more-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.pages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pages a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-form-block {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inp-label {
+  margin-right: 10px;
+}
+
+.inp {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.btn-inp {
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-inp:hover {
+  background-color: #45a049;
 }
