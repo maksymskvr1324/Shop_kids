@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      
+      <Card/>
       <Footer/> 
     </div>
   );
