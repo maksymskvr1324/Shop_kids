@@ -1,18 +1,19 @@
 import React from 'react';
 import {Navbar} from './components/Navbar';
 import {Footer} from './components/footer';
-import {Card} from './components/productCard';
-// import {card_1.webp} from './img';
+import {Page} from './components/Home';
 
 
 
 
 
-function App() {
+
+
+const App: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <Card/>
+      {/* <Page/> */}
       <Footer/> 
     </div>
   );
