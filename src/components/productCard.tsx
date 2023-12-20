@@ -9,7 +9,7 @@ export function Card(){
                         <img src={require('./img/card_1.webp')} alt="" className="card-img" />
                     </div>
                     <div className="card-content">
-                        <div className="cadr-name">i`m a product</div>
+                        <div className="cadr-name">i`m a productt</div>
                         <div className="card-price">$19.00</div>
                         <div className="card-button">Add to cart</div>
                     </div>
