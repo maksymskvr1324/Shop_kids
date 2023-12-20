@@ -78,9 +78,18 @@ body{
   cursor: pointer;
   margin-right: 5px;
 }
+.shop:hover{
+  text-shadow: 1px 0px 1px rgb(0, 0, 0);
+  transition: 0.5s;
+}
 .account{
   cursor: pointer;
   margin-left: 5px;
+}
+
+.account:hover{
+  text-shadow: 1px 0px 1px rgb(0, 0, 0);
+  transition: 0.5s;
 }
 
 
