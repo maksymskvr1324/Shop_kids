@@ -4,17 +4,17 @@ import {Card} from "./productCard";
 export const Page: React.FC = () => {
   const cards = [
     {
-        img : './img/card_1.webp',
+        img : './img/card_1.png',
         name : 'p1',
         price : 'pr1'
     },
     {
-        img : './img/card_1.webp',
+        img : './img/card_1.png',
         name : 'p2',
         price : 'pr2'
     },
     {
-        img : './img/card_1.webp',
+        img : './img/card_1.png',
         name : 'p3',
         price : 'pr3'
     }

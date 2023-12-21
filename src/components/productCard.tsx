@@ -3,8 +3,6 @@ import React from "react";
 export const Card = (props : any) => {
     const { img, name, price } = props;
   
-    // Тут ви можете використовувати img, name, price як частини ваших компонентів.
-  
     return (
         <div className="section">
             <div className="main">
