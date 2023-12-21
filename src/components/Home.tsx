@@ -1,7 +1,8 @@
 import React from "react";
 import {Card} from "./productCard";
 
-const cards = [
+export const Page: React.FC = () => {
+  const cards = [
     {
         img : './img/card_1.webp',
         name : 'p1',
@@ -19,16 +20,11 @@ const cards = [
     }
 ]
 
-// for(let i of cards){
-//     const ExComponent = () => {
-//         return <Card img={i.img} name={i.name} price={i.price} />;
-//     }
-// }
-
-export function Page(){
-    for(let i of cards){
-        const ExComponent = () => {
-            return <Card img={i.img} name={i.name} price={i.price} />;
-        }
-    }
-}
+  return (
+    <div>
+      {cards.map((i, index) => (
+        <Card key={index} img={require(i.img)} name={i.name} price={i.price} />
+      ))}
+    </div>
+  );
+};

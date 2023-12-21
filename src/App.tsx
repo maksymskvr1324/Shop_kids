@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <div>
       <Navbar />
-      {/* <Page/> */}
+      <Page/>
       <Footer/> 
     </div>
   );
