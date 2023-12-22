@@ -103,8 +103,8 @@ body{
 footer {
   background-color: #333;
   color: #fff;
-  bottom: 0;
-  position: fixed;
+  /* bottom: 0; */
+  /* position: fixed; */
   width: 100%;
 }
 
@@ -183,4 +183,8 @@ footer {
 
 .btn-inp:hover {
   background-color: #45a049;
+}
+
+.cards-slider{
+  display: flex;
 }

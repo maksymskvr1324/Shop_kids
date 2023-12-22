@@ -8,7 +8,7 @@ export const Card = (props : any) => {
             <div className="main">
                 <div className="card-container">
                     <div className="card-img-wrap">
-                        <img src={require(img)} alt={name} className="card-img" />
+                        <img src={img} alt={name} className="card-img" />
                     </div>
                     <div className="card-content">
                         <div className="cadr-name"><a href="#"><span>{name}</span></a></div>
