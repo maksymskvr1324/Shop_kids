@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/main.css'
-import './css/card.css'
+import './css/main.css';
+import './css/card.css';
+import './css/registr.css';
 import App from './App';
 
 

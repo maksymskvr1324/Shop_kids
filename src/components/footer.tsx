@@ -10,10 +10,10 @@ export function Footer(){
           <div className="pages">
             <h3>Pages</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/Home">Home</a></li>
+              <li><a href="/Shop">Shop</a></li>
+              <li><a href="/About_us">About Us</a></li>
+              <li><a href="/Contact">Contact</a></li>
             </ul>
           </div>
 

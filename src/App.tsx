@@ -4,6 +4,7 @@ import About from "./pages/About_us";
 import Shop from "./pages/Shop";
 import Conctact from "./pages/Contact";
 import NotPages from "./pages/NoPages";
+import Registr from "./pages/Registr";
 
 export default function App(){
   return(
@@ -15,6 +16,7 @@ export default function App(){
             <Route path="/Shop" element={<Shop/>} />
             <Route path="/About_us" element={<About/>} />
             <Route path="/Contact" element={<Conctact/>} />
+            <Route path="/Registr" element={<Registr/>}/>
             <Route path="*" element={<NotPages/>}/>
           </Routes>
         </BrowserRouter>
