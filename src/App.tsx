@@ -1,22 +1,23 @@
-import React from 'react';
-import {Navbar} from './components/Navbar';
-import {Footer} from './components/footer';
-import {Page} from './components/Home';
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About_us";
+import Shop from "./pages/Shop";
+import Conctact from "./pages/Contact";
+import NotPages from "./pages/NoPages";
 
-
-
-
-
-
-
-const App: React.FC = () => {
-  return (
+export default function App(){
+  return(
     <div>
-      <Navbar />
-      <Page/>
-      <Footer/> 
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home/>} />
+            <Route path="/Home" element={<Home/>} />
+            <Route path="/Shop" element={<Shop/>} />
+            <Route path="/About_us" element={<About/>} />
+            <Route path="/Contact" element={<Conctact/>} />
+            <Route path="*" element={<NotPages/>}/>
+          </Routes>
+        </BrowserRouter>
     </div>
-  );
+  )
 }
-
-export default App;
