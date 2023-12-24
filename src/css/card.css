@@ -17,6 +17,7 @@
     /* Adjust to your desired height */
     /* width: 100%;  */
     border-bottom: 1px solid rgb(206, 206, 206);
+    overflow: hidden;
 }
 
 .card-img{
