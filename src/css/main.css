@@ -100,91 +100,77 @@ body{
 
 /* Footer */
 
-footer {
-  background-color: #333;
-  color: #fff;
-  /* bottom: 0; */
-  /* position: fixed; */
-  width: 100%;
+.border {
+  border-top: solid 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-.footer-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.footer-info-block {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.pages,
-.contact,
-.more-info {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.pages h3,
-.contact h3,
-.more-info h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.pages ul {
-  list-style: none;
-  padding: 0;
-}
-
-.pages a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.footer-form-block {
-  margin-top: 20px;
+p{
+  color: #282828;
+  font-weight: bold;
+  font-size: 28px;
   text-align: center;
 }
 
-.footer-subtitle {
-  font-size: 18px;
-  margin-bottom: 10px;
+.info{
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
 }
 
-.footer-form {
+.info div{
+  margin: 0 auto;
+}
+
+.footer-pages-links{
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-pages-links li {
+  margin: 0px 20px auto;
+}
+
+.footer-pages-links a {
+  text-decoration: none;
+  color:  #2e2e2e;
+}
+
+.footer-form{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-form p{
+  font-weight: 100;
+}
+
+.form-inp{
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.inp-label {
-  margin-right: 10px;
+.form-inp input{
+  height: 30px;
+  width: 340px;
+  border-radius: 5px;
 }
 
-.inp {
-  padding: 8px;
-  font-size: 14px;
-}
-
-.btn-inp {
-  padding: 8px 20px;
-  background-color: #4CAF50;
-  color: #fff;
+.button-input button {
   border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: #fff;
+  background-color: #000;
   cursor: pointer;
-  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px 0px 10px;
+  margin-left: 10px;
 }
 
-.btn-inp:hover {
-  background-color: #45a049;
-}
-
-.cards-slider{
-  display: flex;
+.footer-bottom{
+  text-align: center;
 }
