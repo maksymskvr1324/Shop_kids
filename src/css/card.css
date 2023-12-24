@@ -65,3 +65,6 @@
     color: white;
     background-color: black;
 }
+.cards-slider{
+    display: flex;
+  }
