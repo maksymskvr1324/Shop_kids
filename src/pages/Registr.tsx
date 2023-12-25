@@ -2,23 +2,37 @@ import React from 'react'
 import { Navbar } from '../components/Navbar'
 
 
+
 export default function Registr(){
     return(
 
         <>
         <Navbar/>
-        <form className="decor">
-                <div className="form-left-decoration"></div>
-                <div className="form-right-decoration"></div>
-                <div className="circle"></div>
-            <div className="form-inner">
-                <h3>Написать нам</h3>
-                <input type="text" placeholder="Username" />
-                <input type="email" placeholder="Email" />
-                <textarea placeholder="Сообщение..."></textarea>
-                <input type="submit" value="Отправить" />
-      </div>
-    </form>
+        <div className='reg'>
+            <div className="wrapper">
+                <form action="">
+                <h1>Login</h1>
+                <div className="input-box">
+                    <input type="text" placeholder="Username" required/>
+                    <i className='bx bxs-user'></i>
+                </div>
+                <div className="input-box">
+                    <input type="password"  placeholder="Password" required/>
+                    <i className='bx bxs-lock-alt' ></i>
+                </div>
+                <div className="remember-forgot">
+                    <label> <input type="checkbox"/>Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" className="btn">Login</button>
+
+                <div className="register-link">
+                    <p>Don't have an account <a href="#">Register</a></p>
+                </div>
+                </form>
+            </div>
+        </div>
         </>
         
     )
