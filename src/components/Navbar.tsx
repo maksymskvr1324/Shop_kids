@@ -32,9 +32,7 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, children }) => {
 
   return (
     <li>
-      <Link to={href} className={isActive ? 'active' : ''}>
-        {children}
-      </Link>
+      <Link to={href} className={isActive ? 'active' : ''}>{children}</Link>
     </li>
   );
 };
