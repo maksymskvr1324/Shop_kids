@@ -38,6 +38,8 @@ body{
     display: flex;
     margin: 0;
   }
+
+  
   
   .nav-links li {
     margin: 0px 20px auto;
@@ -106,7 +108,7 @@ body{
   margin-bottom: 30px;
 }
 
-p{
+.footer-title{
   color: #282828;
   font-weight: bold;
   font-size: 28px;
@@ -120,7 +122,8 @@ p{
 }
 
 .info div{
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .footer-pages-links{
@@ -131,6 +134,7 @@ p{
 
 .footer-pages-links li {
   margin: 0px 20px auto;
+  padding-bottom:5px;
 }
 
 .footer-pages-links a {
@@ -138,25 +142,47 @@ p{
   color:  #2e2e2e;
 }
 
+.contact {
+  display: flex;
+  width: 100%; 
+}
+
+.contact span {
+  flex: 1; 
+  text-align: center;
+}
+
+.contact svg {
+  cursor: pointer;
+}
+
+
 .footer-form{
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.footer-form p{
-  font-weight: 100;
+.footer-subtitle{
+  color: #282828;
+  font-size: 18px;
+  text-align: center;
 }
-
 .form-inp{
   display: flex;
   justify-content: center;
 }
 
 .form-inp input{
-  height: 30px;
-  width: 340px;
-  border-radius: 5px;
+  height: 35px;
+  width: 310px;
+  border: solid #333 1px;
 }
+
+.form-inp input:focus {
+  outline: none;
+  border-color: initial;
+}
+
 
 .button-input button {
   border: none;
@@ -169,6 +195,11 @@ p{
   height: 100%;
   padding: 0px 10px 0px 10px;
   margin-left: 10px;
+}
+
+.button-input button:hover{
+  background-color: #c02904;
+  transition: 0.5s;
 }
 
 .footer-bottom{
