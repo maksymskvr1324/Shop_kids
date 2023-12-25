@@ -1,10 +1,10 @@
 .main{
-    margin-top: 100px;
+    margin-top: 80px;
     /* border: 1px solid; */
     max-width: 400px;
     box-shadow: 2px 7px 10px rgb(206, 206, 206);
 
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .card-img-wrap{
@@ -47,10 +47,6 @@
     text-decoration: none;
     color: black;
     transition: 0.35s;
-}
-
-.card-content a:hover{
-    font-size: 18px;
 }
 
 .card-content .card-button{

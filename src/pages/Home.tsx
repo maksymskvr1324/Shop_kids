@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { Card } from "../components/productCard";
 import { Footer } from "../components/footer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
+import 'swiper/css';
 
 interface Product {
     img: string;
@@ -28,20 +31,26 @@ export default function Home(){
         fetchData();
     }, []);
 
-    return(
+    return (
         <>
-            <Navbar/>
-            <div className="cards-slider">
-                {shop.map((item, index) => (
-                    <Card key={index} img={item.img} name={item.name} price={item.price} />
-                ))}
-                <div>
-                    if (shop.length === 6){
-                    }
-                    <p>{`Загальна кількість товарів: ${shop.length}`}</p>
-                </div>
-            </div>  
-            <Footer/>
+        <Navbar/>
+            <Swiper
+                modules={[Autoplay, Pagination, Scrollbar]}
+                autoplay
+                slidesPerView={4}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                >
+                    <div className="slider-wrap">
+                        {shop.map((item, index) => (
+                            <SwiperSlide>
+                                <Card key={index} img={item.img} name={item.name} price={item.price} />
+                            </SwiperSlide>
+                        ))}
+                    </div>
+            </Swiper>
+        <Footer/>
         </>
     )
 }
