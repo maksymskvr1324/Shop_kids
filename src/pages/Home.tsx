@@ -34,13 +34,14 @@ export default function Home(){
     return (
         <>
         <Navbar/>
+        <div className="main-swiper">
             <Swiper
                 modules={[Autoplay, Pagination, Scrollbar]}
-                autoplay
+                // autoplay
                 slidesPerView={4}
                 navigation
-                pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
+                // pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
                 >
                     <div className="slider-wrap">
                         {shop.map((item, index) => (
@@ -50,6 +51,7 @@ export default function Home(){
                         ))}
                     </div>
             </Swiper>
+        </div>
         <Footer/>
         </>
     )

@@ -1,3 +1,16 @@
+.main-swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Налаштуйте висоту на ваш розсуд */
+}
+
+.slider-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main{
     margin-top: 80px;
     /* border: 1px solid; */
