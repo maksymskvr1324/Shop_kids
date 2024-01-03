@@ -1,0 +1,45 @@
+.indicator {
+    /* cursor: pointer; */
+    padding: 10px;
+    text-align: center;
+    border: 1px #666 solid;
+    margin: 0;
+}
+
+.indicator.active {
+    color: #fff;
+    background: #666;
+}
+
+.react-slideshow-container .nav {
+    margin: 0 10px;
+}
+
+.cards-slider-title{
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.shop-all-button{
+    max-width: 155px;
+    color: #fff !important;
+    background-color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 50px auto;
+    margin-bottom: 100px;
+    border: 1px solid black;
+}
+
+.shop-all-button:hover{
+    background-color: #fff;
+    color: black !important;
+}

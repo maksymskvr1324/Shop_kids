@@ -1,34 +1,10 @@
-.main-swiper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Налаштуйте висоту на ваш розсуд */
-}
-
-.slider-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .main{
     margin-top: 80px;
-    /* border: 1px solid; */
     max-width: 400px;
     box-shadow: 2px 7px 10px rgb(206, 206, 206);
-
-    /* margin-left: 50px; */
 }
 
 .card-img-wrap{
-    
-    /* border: 1px solid black; */
-    /* border-radius: 50%; */
-    /* z-index: 9999; */
-    /* background-color: aquamarine; */
-    /* position: relative; */
-    /* Adjust to your desired height */
-    /* width: 100%;  */
     border-bottom: 1px solid rgb(206, 206, 206);
     overflow: hidden;
 }
@@ -38,9 +14,7 @@
     max-height: 400px;
     object-fit: cover;
     transition: 0.35s;
-    /* position: absolute; */
     overflow: hidden;
-    
 }
 
 .card-img:hover{
@@ -49,6 +23,7 @@
 
 .card-content{
     text-align: center;
+    /* font-weight: 500; */
 }
 
 .card-content div{
@@ -63,7 +38,6 @@
 }
 
 .card-content .card-button{
-    margin: 15px;
     border: 1px solid;
     font-size: 18px;
     cursor: pointer;
@@ -74,6 +48,11 @@
     color: white;
     background-color: black;
 }
+
+.card-content .card-price{
+    font-style: italic;
+}
+
 .cards-slider{
     display: flex;
   }
