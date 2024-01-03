@@ -4,6 +4,7 @@ import './css/main.css';
 import './css/card.css';
 import './css/registr.css';
 import './css/about_us.css';
+import './css/home.css'
 import App from './App';
 
 

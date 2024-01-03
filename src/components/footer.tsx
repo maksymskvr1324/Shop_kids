@@ -37,9 +37,9 @@ export function Footer(){
             <div className="more_info">
             <ul className="footer-pages-links">
                 <li><a className='active' href="/Home">Shipping & Returns</a></li>
-                <li><a href="/Shop">Store Policy</a></li>
-                <li><a href="/About_us">Payment Methods</a></li>
-                <li><a href="/Contact">FAQ</a></li>
+                <li><a href="/Sp">Store Policy</a></li>
+                <li><a href="/P">Payment Methods</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
               </ul>
             </div>
           </div>
