@@ -9,6 +9,7 @@ export function Navbar() {
         <ul className="nav-links">
           <CustomLink href="/Home">Home</CustomLink>
           <CustomLink href="/Shop">Shop</CustomLink>
+          <CustomLink href="/Card">Card</CustomLink>
           <CustomLink href="/About_us">About us</CustomLink>
           <CustomLink href="/Contact">Contact</CustomLink>
           <div className='navbar-icon'> 

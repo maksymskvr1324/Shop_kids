@@ -5,6 +5,7 @@ import Shop from "./pages/Shop";
 import Conctact from "./pages/Contact";
 import NotPages from "./pages/NoPages";
 import Registr from "./pages/Registr";
+import Card from "./pages/Card";
 
 export default function App(){
   return(
@@ -14,6 +15,7 @@ export default function App(){
             <Route index element={<Home/>} />
             <Route path="/Home" element={<Home/>} />
             <Route path="/Shop" element={<Shop/>} />
+            <Route path="/Card" element={<Card/>} />
             <Route path="/About_us" element={<About/>} />
             <Route path="/Contact" element={<Conctact/>} />
             <Route path="/Registr" element={<Registr/>}/>
