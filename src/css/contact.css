@@ -1,0 +1,30 @@
+.contact{
+    max-width: 80%;
+    margin: 0 auto;
+    
+}
+
+.contact-info{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cont_toitle{
+    color: #282828;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.address,
+.opening-hours,
+.customer-service {
+  padding: 0px 50px 0px 50px;
+}
+
+
+.contact_form{
+    text-align: center;
+    align-items: center;
+}
