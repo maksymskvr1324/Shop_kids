@@ -37,10 +37,6 @@ const properties = {
     nextArrow: <button style={{ ...buttonStyle }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#000"><path d="M512 256L270 42.6v138.2H0v150.6h270v138z"/></svg></button>
 }
 
-const buttonLink = () => {
-    console.log('click')
-}
-
 export default function Home(){
 
     const [shop, setShop] = useState<Product[]>([])
@@ -48,7 +44,7 @@ export default function Home(){
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await fetch('https://658574c2022766bcb8c8adf9.mockapi.io/Shop');
+            const response = await fetch('https://658574c2022766bcb8c8adf9.mockapi.io/Home');
             const data = await response.json();
             setShop(data);
             console.log(data);
@@ -83,7 +79,6 @@ export default function Home(){
             </Slide>
         </div>
         <Link to="/Shop"><div className="shop-all-button">Shop All</div></Link>
-        {/* onClick={buttonLink} */}
         <Footer/>
         </>
     )
