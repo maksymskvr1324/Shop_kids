@@ -6,7 +6,7 @@ export default function Card(){
         <>
             <Navbar/>
             <div className="card">
-                <div className="card_img"></div>
+                <div className="card_img"><img src="" alt="" /></div>
                 <div className="card_by">
                     <p>eGift Card</p>
                     <div className="price_out" id="price_out">US100$</div>
