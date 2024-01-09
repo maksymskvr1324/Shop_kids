@@ -13,7 +13,7 @@ interface Product {
 
 export default function Shop(){
 
-    const [shop, setShop] = useState<Product[]>([])
+    const [shop, setShop] = useState<Product[][]>([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,12 +38,14 @@ export default function Shop(){
                 <div className="filter"></div>
                 <div className="block-cards">
                 {/* <p>{JSON.stringify(shop[1])}</p> */}
-                    {/* {shop[0].map((item, index) => (
+                    {shop.map((item, index) => (
                         <div key={index}>
-                            <p>{JSON.stringify(item)}</p>
+                            {item.map((element) => (
+                                <div>{JSON.stringify(element)}</div>
+                            ))}                        
                         </div>
                         // <Card key={index} img={item.img} name={item.name} price={item.price} />
-                    ))} */}
+                    ))}
                 </div>
             </div>
             <Footer/>
