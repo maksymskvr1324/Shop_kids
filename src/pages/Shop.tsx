@@ -38,14 +38,24 @@ export default function Shop(){
                 <div className="filter"></div>
                 <div className="block-cards">
                 {/* <p>{JSON.stringify(shop[1])}</p> */}
-                    {shop.map((item, index) => (
-                        <div key={index}>
-                            {item.map((element) => (
-                                <div>{JSON.stringify(element)}</div>
-                            ))}                        
+                {/* {shop[0] && (
+                    shop[0].map((item, index) => (
+                    <div key={index}>
+                        <p>{JSON.stringify(item)}</p>
+                    </div>
+                    ))
+                )} */}
+                {
+                    shop.map((item, index) => (
+                        <div key={index} className="cards">
+                            {item.map((element, key) => (
+                                <div key="key" className="card">
+                                    <Card img={element.img} name={element.name} price={element.price}/>
+                                </div>
+                            ))}
                         </div>
-                        // <Card key={index} img={item.img} name={item.name} price={item.price} />
-                    ))}
+                    ))
+                }
                 </div>
             </div>
             <Footer/>

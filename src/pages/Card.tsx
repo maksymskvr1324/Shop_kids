@@ -1,10 +1,14 @@
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
+import "./my-element.js";
 
 export default function Card(){
     return(
         <>
             <Navbar/>
+            {/* <my-element>
+                <p>This is child content</p>
+            </my-element> */}
             <div className="card">
                 <div className="card_img"></div>
                 <div className="card_by">
