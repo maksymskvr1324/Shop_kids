@@ -1,13 +1,13 @@
-.contact{
-    max-width: 80%;
+.contact_us{
+    width: 80%;
     margin: 0 auto;
-    
+    text-align: center;
 }
+
+    
 
 .contact-info{
     display: flex;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .cont_toitle{
@@ -21,10 +21,119 @@
 .opening-hours,
 .customer-service {
   padding: 0px 50px 0px 50px;
+  margin: 0 auto;
 }
 
 
 .contact_form{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact_form p{
     text-align: center;
+}
+
+
+.inp_name input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.inp_name input:hover{
+    border-bottom: 2px solid black;
+}
+
+.inp_name input:focus {
+    outline: none; 
+    border-bottom: 2px solid black;
+}
+
+
+.email input{
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.email input:hover{
+    border-bottom: 2px solid black;
+}
+
+.email input:focus {
+    outline: none; 
+    border-bottom: 2px solid black;
+}
+
+
+.subject input{
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.subject input:hover{
+    border-bottom: 2px solid black;
+    
+}
+
+.subject input:focus {
+    outline: none; 
+    border-bottom: 2px solid black;
+}
+
+
+.message textarea {
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.message textarea:hover {
+    border-bottom: 2px solid black;
+}
+
+.message textarea:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+
+.contact_form button{
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+    margin-top: 20px
+}
+
+.contact_form button:hover{
+    color: red;
+    transition: 0.5s;
+}
+
+.button_sub{
     align-items: center;
+}
+
+
+
+.button_sub {
+    margin-top: 20px; 
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
 }

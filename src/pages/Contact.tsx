@@ -5,7 +5,6 @@ export default function Conctact(){
     return(
         <>
             <Navbar/>
-            <div className="contact">
                 <div className="contact_us">
                     <p className="cont_toitle">Contact Us</p>
                     <div className="contact-info">
@@ -42,9 +41,28 @@ export default function Conctact(){
                     <div className="contact_title">
                         <p>FOR ANY QUESTIONS, PLEASE SEND US A MESSAGE</p>
                     </div>
+                    <div className="inp_name">
+                        <label htmlFor="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" />
+
+                        <label htmlFor="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" />
+                    </div>
+                    <div className="email">
+                        <label htmlFor="email">Email:</label>
+                        <input/>
+                    </div>
+                    <div className="subject">
+                        <label htmlFor="subject">Subject:</label>
+                        <input/>
+                    </div>
+                    <div className="message">
+                        <label htmlFor="message">Message:</label>
+                        <textarea ></textarea>
+                    </div>
+                    <button className="button_sub" type="submit">Submit</button>
                 </div>
                 <div className="contact_map"></div>
-            </div>
             <Footer/>
         </>
     )
