@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
 import { Card } from "../components/productCard";
+import { Filter } from "../components/filter";
 
 interface Product {
     img: string;
@@ -35,26 +36,22 @@ export default function Shop(){
             <Navbar/>
             <div className="shop-title">Shop Collection</div>
             <div className="main-shop-content">
-                <div className="filter"></div>
+                <div className="filter">
+                {/* <Filter>
+                    
+                </Filter> */}
+                </div>
                 <div className="block-cards">
-                {/* <p>{JSON.stringify(shop[1])}</p> */}
-                {/* {shop[0] && (
-                    shop[0].map((item, index) => (
-                    <div key={index}>
-                        <p>{JSON.stringify(item)}</p>
-                    </div>
-                    ))
-                )} */}
                 {
-                    shop.map((item, index) => (
-                        <div key={index} className="cards">
-                            {item.map((element, key) => (
-                                <div key="key" className="card">
-                                    <Card img={element.img} name={element.name} price={element.price}/>
-                                </div>
-                            ))}
-                        </div>
-                    ))
+                shop.map((item, index) => (
+                    <div key={index} className="cards">
+                        {item.map((element, key) => (
+                            <div key="key" className="card">
+                                <Card img={element.img} name={element.name} price={element.price}/>
+                            </div>
+                        ))}
+                    </div>
+                ))
                 }
                 </div>
             </div>

@@ -1,6 +1,5 @@
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
-import "./my-element.js";
 
 export default function Card(){
     return(
