@@ -2,30 +2,13 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer"; 
 
 export default function Conctact(){
-    // let map: google.maps.Map;
-    // const center: google.maps.LatLngLiteral = { lat: 49.84235186414242, lng: 24.067245020297015 };
-
-    // function initMap(): void {
-    //     map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-    //         center,
-    //         zoom: 18,
-    //         mapId: "DEMO_MAP_ID",
-    //         mapTypeId: "satellite",
-    //     });
-    //     map.setTilt(45);
-    // }
-    // Initialize and add the map
     let map;
     async function initMap(): Promise<void> {
-    // The location of Uluru
     const position = { lat: 49.84235186414242, lng: 24.067245020297015 };
 
-    // Request needed libraries.
-    //@ts-ignore
     const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
-    // The map, centered at Uluru
     map = new Map(
         document.getElementById('map') as HTMLElement,
         {
@@ -38,7 +21,6 @@ export default function Conctact(){
     
     map.setTilt(45);
 
-    // The marker, positioned at Uluru
     const marker = new AdvancedMarkerElement({
         map: map,
         position: position,
