@@ -37,6 +37,15 @@
 }
 
 
+.inp_name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inp_name div{
+    width: 47%;
+}
+
 .inp_name input {
     margin-bottom: 20px;
     padding: 10px;
@@ -122,18 +131,36 @@
 
 .contact_form button:hover{
     color: red;
-    transition: 0.5s;
 }
-
-.button_sub{
-    align-items: center;
-}
-
-
 
 .button_sub {
+    cursor: pointer;
+    align-items: center;
     margin-top: 20px; 
     border: none;
     background-color: #fff;
     font-size: 16px;
+    transition: 0.3s;
 }
+
+.contact_form .contact_title,
+.contact_form .button_sub{
+    margin: 40px auto;
+}
+
+
+#map {
+    height: 500px;
+    width: 100%;
+    
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  /* html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  } */
