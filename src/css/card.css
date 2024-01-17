@@ -1,7 +1,13 @@
 .main{
     margin-top: 80px;
-    max-width: 400px;
+    max-width: 100%;
     box-shadow: 2px 7px 10px rgb(206, 206, 206);
+    margin: 10px 5px 10px 5px;
+}
+
+.main-shop-content{
+    width: 98%;
+    margin: 0 auto;
 }
 
 .card-img-wrap{

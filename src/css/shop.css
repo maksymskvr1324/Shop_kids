@@ -5,30 +5,25 @@
 }
 
 .main-shop-content{
-    max-width: 98%;
-    border: 1px solid blue;
+    max-width: 100%;
     margin: auto;
     display: flex;
 }
 
 .main-shop-content .filter,
 .main-shop-content .block-cards{
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .filter{
-    min-width: 15%;
+    min-width: 13%;
     border: 1px solid red;
 }
 
-.block-cards{
-    width: 77%;
-}
+
 
 .cards{
     display: flex;
 }
 
-.card{
-    margin: 0 auto;
-}
+
