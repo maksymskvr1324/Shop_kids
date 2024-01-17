@@ -24,7 +24,7 @@ export default function Conctact(){
     const marker = new AdvancedMarkerElement({
         map: map,
         position: position,
-        title: 'Uluru'
+        title: 'Михайло Коберник'
     });
     }
     window.addEventListener('load', initMap)
