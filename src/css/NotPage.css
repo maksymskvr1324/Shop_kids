@@ -1,0 +1,36 @@
+.container_notPage{
+    max-width: 60%;
+    margin: 50px auto;
+}
+
+.container_notPage .notPage_title{
+    text-align: center;
+    font-size: 200px;
+    font-weight: bold;
+    margin: 5px
+}
+
+.container_notPage p,
+.container_notPage h1,
+.container_notPage div{
+    text-align: center;
+}
+
+.notPage_btn{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.notPage_btn:hover{
+    background: #333;
+    color: #ffffff;
+}

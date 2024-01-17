@@ -8,12 +8,14 @@ import './css/gif_card.css';
 import './css/about_us.css';
 import './css/home.css';
 import './css/shop.css';
+import './css/NotPage.css';
 import App from './App';
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <App />
