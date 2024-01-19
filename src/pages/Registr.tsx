@@ -1,23 +1,62 @@
 import React, { useState } from 'react';
-import { Navbar } from "../components/Navbar";
+import axios from 'axios';
 
 interface FormProps {
   onSubmit: () => void;
 }
 
+interface UserCredentials {
+  email: string;
+  password: string;
+}
+
 const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  
+  const [credentials, setCredentials] = useState<UserCredentials>({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setCredentials((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+
+      await axios.post('http://localhost:5000/login', credentials);
+
+      onSubmit();
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
+
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <h1>Login</h1>
       <div className="input-box">
-        <input type="text" placeholder="Enter your email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter your email"
+          required
+          value={credentials.email}
+          onChange={handleChange}
+        />
         <i className='bx bxs-user'></i>
       </div>
       <div className="input-box">
-        <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          value={credentials.password}
+          onChange={handleChange}
+        />
         <i className='bx bxs-lock-alt' ></i>
       </div>
       <div className="remember-forgot">
@@ -30,23 +69,62 @@ const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
 };
 
 const RegistrationForm: React.FC<FormProps> = ({ onSubmit }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [credentials, setCredentials] = useState<UserCredentials>({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setCredentials((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+
+      await axios.post('http://localhost:5000/register', credentials);
+
+      onSubmit();
+    } catch (error) {
+      console.error('Error during registration:', error);
+    }
+  };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <h1>Signup</h1>
       <div className="input-box">
-        <input type="text" placeholder="Enter your email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter your email"
+          required
+          value={credentials.email}
+          onChange={handleChange}
+        />
         <i className='bx bxs-user'></i>
       </div>
       <div className="input-box">
-        <input type="password" placeholder="Create password" required value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <input
+          type="password"
+          name="password"
+          placeholder="Create password"
+          required
+          value={credentials.password}
+          onChange={handleChange}
+        />
         <i className='bx bxs-lock-alt' ></i>
       </div>
       <div className="input-box">
-        <input type="password" placeholder="Confirm password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+        <input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm password"
+          required
+          onChange={handleChange}
+        />
         <i className='bx bxs-lock-alt' ></i>
       </div>
       <button type="submit" className="btn">Signup Now</button>
@@ -95,7 +173,6 @@ const Register: React.FC = () => {
         )}
       </div>
     </div>
-    
   );
 };
 
