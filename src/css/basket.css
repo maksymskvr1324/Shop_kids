@@ -1,0 +1,22 @@
+.sidebar{
+    background-color: red;
+    width: 280px;
+    box-shadow: 2px 0px 5px #777;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.7s;
+}
+span.arrow{
+    float: right;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 24px;
+    transition: 0.7s;
+    margin-right: 5px;
+}
+.d-none{
+    transform: translateX(-275px);
+}
+.p-none{
+    transform: rotate(180deg);
+}

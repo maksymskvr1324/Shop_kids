@@ -4,6 +4,7 @@ import { Footer } from "../components/footer";
 import { Card } from "../components/productCard";
 import { Filter } from "../components/filter";
 
+
 interface Product {
     img: string;
     name: string;

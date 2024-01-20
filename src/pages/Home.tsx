@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { Card } from "../components/productCard";
 import { Footer } from "../components/footer";
 
+
 import { Fade, Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
