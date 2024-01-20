@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'your_mysql_user',
-  password: 'your_mysql_password',
-  database: 'your_database',
+  user: 'Temp',
+  password: '1111',
+  database: 'shop_kids',
 });
 
 db.connect((err) => {
@@ -25,7 +25,7 @@ db.connect((err) => {
 app.post('/register', (req, res) => {
   const { email, password } = req.body;
 
-  const sql = 'INSERT INTO users (email, password) VALUES (?, ?)';
+  const sql = `INSERT INTO shop_kids.registration (email, password) VALUES (?, ?)`;
   db.query(sql, [email, password], (err, result) => {
     if (err) {
       console.error('Error during registration:', err);

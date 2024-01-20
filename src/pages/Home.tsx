@@ -75,7 +75,9 @@ export default function Home(){
         <div className="slide-container">
             <Slide {...properties} slidesToScroll={1} slidesToShow={4} indicators={true}>
                 {shop.map((item, index) => (
-                    <Card key={index} img={item.img} name={item.name} price={item.price} />
+                    <div key={index}>
+                        <Card img={item.img} name={item.name} price={item.price} />
+                    </div>
                 ))}
             </Slide>
         </div>
