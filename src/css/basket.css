@@ -1,12 +1,11 @@
 .sidebar {
-    width: 15%;
-    height: 1118px;
+    width: 25%;
+    height: 100vh;
     z-index: 100;
-    position: absolute;
+    position: fixed;
     right: 0;
-    background-color: #ffffffc5;
-    transition: width 0.5s ease, right 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
-    top: 60px;
+    background-color: #fff;
+    top: 0;
     border-left: 1px solid rgb(208, 208, 208);
     box-shadow: 0px 2px 6px rgb(206, 206, 206);
 }
@@ -14,6 +13,39 @@
 .close {
     width: 30px;
     height: 30px;
-    margin: 0 10px;
     cursor: pointer;
+    color: #fff;
 }
+
+.close:hover {
+    opacity: 0.7;
+}   
+
+.sidebar_top{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.sidebar_top p{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin:20px auto;
+}
+
+.sidebar_top .close{
+    fill: #fff;
+}
+
+.sidebar_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+  

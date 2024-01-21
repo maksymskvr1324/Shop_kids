@@ -1,0 +1,30 @@
+.basket_cart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.basket_cart > img{
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.basket_cart > span{
+    /* width: 40%; */
+    /* height: 40%; */
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: red;
+}
+
+.basket_cart > span:hover{
+    cursor: pointer;
+}
