@@ -15,13 +15,6 @@
     margin: 0 auto;
 }
 
-.filter{
-    min-width: 13%;
-    border: 1px solid red;
-}
-
-
-
 .cards{
     display: flex;
 }
