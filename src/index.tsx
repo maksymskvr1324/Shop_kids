@@ -8,6 +8,8 @@ import './css/about_us.css';
 import './css/home.css';
 import './css/shop.css';
 import './css/NotPage.css';
+import './css/basket.css';
+import './css/bascet_cart.css';
 import App from './App';
 
 
