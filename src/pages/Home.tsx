@@ -7,7 +7,7 @@ import { Footer } from "../components/footer";
 import { Fade, Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
-import { Link } from 'react-router-dom';
+import { Await, Link } from 'react-router-dom';
 
 interface Product {
     img: string;

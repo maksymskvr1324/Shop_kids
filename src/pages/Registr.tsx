@@ -14,6 +14,7 @@ const select = () =>{
     const session = sessionStorage.getItem(`register${j}`);
     if(session){
       const sessionObj = JSON.parse(session);
+      console.log(sessionObj);
       return sessionObj;
     }
   }
@@ -30,7 +31,6 @@ const LoginForm = () => {
           name="email"
           placeholder="Enter your email"
           required
-          value={select()[0]}
         />
         <i className='bx bxs-user'></i>
       </div>
@@ -40,7 +40,6 @@ const LoginForm = () => {
           name="password"
           placeholder="Password"
           required
-          value={select()[1]}
         />
         <i className='bx bxs-lock-alt' ></i>
       </div>
