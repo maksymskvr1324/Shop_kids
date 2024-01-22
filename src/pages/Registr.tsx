@@ -1,41 +1,29 @@
+import { Session } from 'inspector';
 import React, { useState } from 'react';
-import axios from 'axios';
+// файл і функція для запису в базу данних, але вибиває помилку і не знаю як це вирішити
+// import insert from '../../backend/server';
 
-interface FormProps {
-  onSubmit: () => void;
+let i = 0;
+const insert = (email: string, password: string) =>{
+  sessionStorage.setItem(`register${i}`, JSON.stringify([email, password]));
+  i++;
 }
 
-interface UserCredentials {
-  email: string;
-  password: string;
-}
-
-const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
-  const [credentials, setCredentials] = useState<UserCredentials>({
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setCredentials((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-
-      await axios.post('http://localhost:5000/login', credentials);
-
-      onSubmit();
-    } catch (error) {
-      console.error('Error during login:', error);
+const select = () =>{
+  for(let j = 0; j < i; j++){
+    const session = sessionStorage.getItem(`register${j}`);
+    if(session){
+      const sessionObj = JSON.parse(session);
+      console.log(sessionObj[0], sessionObj[1]);
+      // return sessionObj;
     }
-  };
+  }
+}
+
+const LoginForm = () => {
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <h1>Login</h1>
       <div className="input-box">
         <input
@@ -43,8 +31,7 @@ const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
           name="email"
           placeholder="Enter your email"
           required
-          value={credentials.email}
-          onChange={handleChange}
+          // onChange={}
         />
         <i className='bx bxs-user'></i>
       </div>
@@ -54,8 +41,7 @@ const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
           name="password"
           placeholder="Password"
           required
-          value={credentials.password}
-          onChange={handleChange}
+          // onChange={}
         />
         <i className='bx bxs-lock-alt' ></i>
       </div>
@@ -63,37 +49,34 @@ const LoginForm: React.FC<FormProps> = ({ onSubmit }) => {
         <label> <input type="checkbox"/>Remember me</label>
         <a href="#">Forgot password?</a>
       </div>
-      <button type="submit" className="btn">Login Now</button>
+      <button onClick={select} className="btn">Login Now</button>
     </form>
   );
 };
 
-const RegistrationForm: React.FC<FormProps> = ({ onSubmit }) => {
-  const [credentials, setCredentials] = useState<UserCredentials>({
-    email: '',
-    password: '',
-  });
+const RegistrationForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassowrd] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setCredentials((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }else{
+      console.log(email, password);
+      // виклик функції для запису в базу данних
+      // insert(email, password);
 
-      await axios.post('http://localhost:5000/register', credentials);
-
-      onSubmit();
-    } catch (error) {
-      console.error('Error during registration:', error);
-    }
+      insert(email, password);
+    };
+    
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <h1>Signup</h1>
       <div className="input-box">
         <input
@@ -101,8 +84,7 @@ const RegistrationForm: React.FC<FormProps> = ({ onSubmit }) => {
           name="email"
           placeholder="Enter your email"
           required
-          value={credentials.email}
-          onChange={handleChange}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <i className='bx bxs-user'></i>
       </div>
@@ -112,8 +94,7 @@ const RegistrationForm: React.FC<FormProps> = ({ onSubmit }) => {
           name="password"
           placeholder="Create password"
           required
-          value={credentials.password}
-          onChange={handleChange}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <i className='bx bxs-lock-alt' ></i>
       </div>
@@ -123,11 +104,11 @@ const RegistrationForm: React.FC<FormProps> = ({ onSubmit }) => {
           name="confirmPassword"
           placeholder="Confirm password"
           required
-          onChange={handleChange}
+          onChange={(e) => setConfirmPassowrd(e.target.value)}
         />
         <i className='bx bxs-lock-alt' ></i>
       </div>
-      <button type="submit" className="btn">Signup Now</button>
+      <button onClick={handleSubmit} className="btn">Signup Now</button>
     </form>
   );
 };
@@ -139,16 +120,12 @@ const Register: React.FC = () => {
     setShowLoginForm((prev) => !prev);
   };
 
-  const handleSubmit = () => {
-    console.log(showLoginForm ? 'Login submitted' : 'Registration submitted');
-  };
-
   return (
     <div className='reg'>
       <div className="wrapper">
         {showLoginForm ? (
           <>
-            <LoginForm onSubmit={handleSubmit} />
+            <LoginForm />
             <div className="register-link">
               <p>
                 Don't have an account?{' '}
@@ -160,7 +137,7 @@ const Register: React.FC = () => {
           </>
         ) : (
           <>
-            <RegistrationForm onSubmit={handleSubmit} />
+            <RegistrationForm />
             <div className="register-link">
               <p>
                 Already have an account?{' '}
