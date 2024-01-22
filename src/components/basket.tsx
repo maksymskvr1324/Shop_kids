@@ -33,9 +33,14 @@ const Basket: React.FC<BasketProps> = ({ cartItems }) => {
     const updatedCartItems = [...cartItems];
     updatedCartItems.splice(index, 1);
 
-
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   };
+
+  const clearBasket = () => {
+    localStorage.removeItem('cartItems');
+    setBasketVisible(false);
+  };
+
   return (
     <>
       {isBasketVisible && (
@@ -64,8 +69,14 @@ const Basket: React.FC<BasketProps> = ({ cartItems }) => {
               ) : (
                 <p className="empty-cart-message">Basket entry</p>
               )}
+              
             </div>
           </span>
+          <div className="basket-actions">
+            <button className="clear-basket-button" onClick={clearBasket}>
+              Clear Basket
+            </button>
+          </div>
         </div>
       )}
     </>
