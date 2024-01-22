@@ -6,12 +6,12 @@ import Basket from "../components/basket";
 import { Product, CartItem } from "../components/type"; 
 
 export default function Shop() {
-  const [shop, setShop] = useState<Product[]>([]);
+  const [shop, setShop] = useState<Product[][]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://658574c2022766bcb8c8adf9.mockapi.io/Home");
+        const response = await fetch("https://658574c2022766bcb8c8adf9.mockapi.io/Shop");
         const data = await response.json();
         setShop(data);
         console.log(data);
@@ -33,7 +33,11 @@ export default function Shop() {
         <div className="block-cards">
           {shop.map((item, index) => (
             <div key={index} className="cards">
-              <Card img={item.img} name={item.name} price={item.price} />
+              {item.map((item, index) => (
+                <div key={index} className="card">
+                  <Card img={item.img} name={item.name} price={item.price} />
+                </div>
+              ))}
             </div>
           ))}
         </div>

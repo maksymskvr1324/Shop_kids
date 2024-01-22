@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // файл і функція для запису в базу данних, але вибиває помилку і не знаю як це вирішити
 // import insert from '../../backend/server';
 
-let i = 0;
+let i = 1;
 const insert = (email: string, password: string) =>{
   sessionStorage.setItem(`register${i}`, JSON.stringify([email, password]));
   i++;
@@ -14,8 +14,7 @@ const select = () =>{
     const session = sessionStorage.getItem(`register${j}`);
     if(session){
       const sessionObj = JSON.parse(session);
-      console.log(sessionObj[0], sessionObj[1]);
-      // return sessionObj;
+      return sessionObj;
     }
   }
 }
@@ -31,7 +30,7 @@ const LoginForm = () => {
           name="email"
           placeholder="Enter your email"
           required
-          // onChange={}
+          value={select()[0]}
         />
         <i className='bx bxs-user'></i>
       </div>
@@ -41,7 +40,7 @@ const LoginForm = () => {
           name="password"
           placeholder="Password"
           required
-          // onChange={}
+          value={select()[1]}
         />
         <i className='bx bxs-lock-alt' ></i>
       </div>
