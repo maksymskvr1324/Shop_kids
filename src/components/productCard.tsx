@@ -31,7 +31,7 @@ export const Card = (props: any) => {
                 <span>{price}</span>
             </div>
             <div className="card-button" onClick={Add_to_cart}>
-              Додати в корзину
+              Add to  Cart
             </div>
           </div>
         </div>
