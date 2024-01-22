@@ -8,6 +8,7 @@
     overflow-y: auto;
     border-left: 1px solid #eee;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 
   }
   .sidebar_bottom::-webkit-scrollbar {
