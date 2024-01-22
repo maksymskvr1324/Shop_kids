@@ -28,7 +28,7 @@ export default function Shop() {
   return (
     <>
       <Navbar />
-      <div className="shop-title">Колекція магазину</div>
+      <div className="shop-title">Shop Collection</div>
       <div className="main-shop-content">
         <div className="block-cards">
           {shop.map((item, index) => (
