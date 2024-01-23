@@ -57,6 +57,10 @@ export default function Home(){
         fetchData();
     }, []);
 
+    if (!shop.length) {
+        return <div>Loading...</div>
+    }
+
     return (
         <>
         <Navbar/>
